@@ -1,0 +1,25 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+body img{
+    height: 100vh;
+    width: 100vw;
+}
+.container{
+    position: absolute;
+}
+.container h1,h2,span{
+    text-align: center;
+}
+.container h1{
+    font-size: 10vmin;
+}
+h2 > span{
+    font-size: 5vmin;
+}

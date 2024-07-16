@@ -1,0 +1,31 @@
+body{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    font-family: sans-serif;
+    color: antiquewhite;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, aquamarine,aqua ,rgb(0, 102, 255));
+    padding: 20px;
+    border-radius: 20px;
+    width: 500px;
+    align-items: center;
+}
+.container .weather h1{
+    text-align: center;
+    
+}
+.container .weather h2{
+    text-align: center;
+    
+}
+.container .details{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}

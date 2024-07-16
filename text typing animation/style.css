@@ -1,0 +1,219 @@
+*{
+    font-family: sans serif;
+}
+body{
+    background-color: black;
+    color: #fff;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+span{
+    color: yellow;
+}
+h2{
+    font-size: 10vmin;
+}
+h2 span{
+    display: inline-block;
+}
+h2:hover span{
+    cursor: pointer;
+    color: blueviolet;
+    transform: translateY(-30px);
+    transition: 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) ;
+}
+.container .static{
+    font-size: 7vmin;
+    font-weight: 400;
+}
+.container .dynamic{
+    line-height: 90px;
+    height: 90px; 
+    overflow: hidden;
+    list-style-type: none;
+    padding-left: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 15px;
+    font-size: 7vmin;
+    font-weight: 400;
+
+}
+.container .typing{
+    display: flex;
+}
+.container .dynamic li span{
+    position: relative;
+}
+.container .dynamic li{
+    margin: 50px 0px;
+    position: relative;
+    animation-delay: 1s;
+    animation: slide 6s steps(3) infinite;
+    margin-top: -15px;
+    top: 0;
+    
+}
+.container .dynamic li span::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    border-left: 2px solid gold;
+    padding: 10px 0px;
+    animation: typing 2s steps(10) infinite;
+}
+ @keyframes typing {
+    100%{
+        left: 100%;
+        margin: 0px -35px 0px 35px;
+    }
+}
+@keyframes slide {
+    100%{
+        top: -375px;
+    }
+}
+.container .typing2 span{
+    position: relative;
+    color: aqua;
+    font-size: 10vmin;
+    font-weight: 600;
+}
+
+.container .typing2 .first{
+    color: #fff;
+}
+.container .typing2 .second::before{
+    content: '';
+    position: absolute;
+    border-left: 2px solid aqua;
+    height: 100%;
+    width: 100%;
+    top:0;
+    left: 0;
+    background-color: black;
+    animation: typing2 4s steps(8) infinite;
+
+}
+@keyframes typing2 {
+    40%,60%{
+        left: 100%;
+    }
+    100%{
+        left: 0%;
+    }
+}
+.container .glitch{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+.container .glitch .text{
+    color: #fff;
+    font-size: 35px;
+    font-weight: 600;
+    text-transform: uppercase;
+    transform: scale(2);
+    letter-spacing: 2px;
+    padding: 30px;
+}
+.container .glitch .text::before,
+.container .glitch .text::after{
+    position: absolute;
+    content: attr(data-text);
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    /* background-color: #000; */
+    color: #fff;
+    overflow: hidden;
+}
+.container .glitch .text:before{
+    left: 3px;
+    text-shadow: -5px 3px red;
+    animation: glitch-1 2s 0s linear reverse infinite;
+}
+.container .glitch .text:after{
+    left: -3px;
+    text-shadow: 2px 0 blue;
+    animation: glitch-2 2s 0s linear reverse infinite;
+}
+@keyframes glitch-1 {
+    10%{
+        clip: rect(133px, 350px, 79px, 30px);
+    }
+    20%{
+        clip: rect(87px, 350px, 79px, 30px);
+    }
+    30%{
+        clip: rect(133px, 350px, 50px, 30px);
+    }
+    40%{
+        clip: rect(33px, 350px,30px, 30px);
+    }
+    50%{
+        clip: rect(160px, 350px, 90px, 30px);
+    }
+    60%{
+        clip: rect(21px, 350px, 35px, 30px);
+    }
+    70%{
+        clip: rect(80px, 350px, 70px, 30px);
+    }
+    80%{
+        clip: rect(10px, 350px, 25px, 30px);
+    }
+    90%{
+        clip: rect(121px, 350px, 100px, 30px);
+    }
+    100%{
+        clip: rect(15px, 350px, 12px, 30px);
+    }
+}
+@keyframes glitch-2 {
+    10%{
+        clip: rect(13px, 350px, 79px, 30px);
+    }
+    20%{
+        clip: rect(137px, 350px, 89px, 30px);
+    }
+    30%{
+        clip: rect(133px, 350px, 100px, 30px);
+    }
+    40%{
+        clip: rect(73px, 350px,80px, 30px);
+    }
+    50%{
+        clip: rect(54px, 350px, 67px, 30px);
+    }
+    60%{
+        clip: rect(67px, 350px, 78px, 30px);
+    }
+    70%{
+        clip: rect(8px, 350px, 90px, 30px);
+    }
+    80%{
+        clip: rect(110px, 350px, 85px, 30px);
+    }
+    90%{
+        clip: rect(121px, 350px, 100px, 30px);
+    }
+    100%{
+        clip: rect(15px, 350px, 120px, 30px);
+    }
+}
+
+
+
+
+
+
+

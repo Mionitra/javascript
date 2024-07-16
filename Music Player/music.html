@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="fontawesome6/css/all.css">
+    <link rel="stylesheet" href="music.css">
+    <title>Music player</title>
+</head>
+<body>
+    <div class="music-player">
+        <button id="playlist">
+            </button>
+            <i class="fa fa-angle-down"></i>
+            <!--  SONG DETAILS  -->
+            <img src="image/anime1.jpg" alt="" id="song-image">
+            <div class="song-details">
+                <p id="song-name">
+                    Hold on
+                </p>
+                <p id="song-artist">
+                    Chord Overstreet
+                </p>
+            </div>
+
+            <!--  SONG BUTTONS OPTIONS -->
+
+            <div class="player-options">
+                <button id="shuffle">
+                    <i class="fa fa-shuffle"></i>
+                </button>
+                <button id="prev">
+                    <i class="fa fa-backward-step"></i>
+                </button>
+                <button id="play">
+                    <i class="fa fa-play"></i>
+                </button>
+                <button id="pause" class="hide">
+                    <i class="fa fa-pause"></i>
+                </button>
+                <button id="next">
+                    <i class="fa fa-forward-step"></i>
+                </button>
+                <button id="repeat">
+                    <i class="fa fa-repeat"></i>
+                </button>
+            </div>
+            <!--  SONG IMPORT -->
+            <audio src="" id="audio" preload="metadata"></audio>
+            <!--  SONG PROGRESSION  -->
+            <div id="progress-bar">
+                <div id="current-progress"></div>
+            </div>
+            <div class="time-container">
+                <div class="current-time">0:00</div>
+                <div class="max-time">0:00</div>
+            </div>
+            <div id="playlist-container">
+                <button id="close-button">
+                    <i class="fa fa-times"></i>
+                </button>
+                <ul id="playlist-songs">
+                    
+                </ul>
+            </div>
+    </div>
+    <!-- SCRIPT -->
+    <script src="music.js"></script>
+</body>
+</html>
